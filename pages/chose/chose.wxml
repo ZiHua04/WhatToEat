@@ -1,0 +1,21 @@
+<view class="container">
+  <view class = "example">
+    <view>看看下面有什么想吃的吗</view>
+    <block wx:for="{{cafe}}">
+      <button  class="chosebutton"  data-item = "{{item}}" bindtap="chosetoeat" type="primary">{{item}}</button>
+    </block>
+    <block wx:if="{{!isShowInput}}">
+      <button bindtap="handleAdd"  type="default" >"+"</button>
+    <button bindtap="outputConfirm" type="default">"-"</button>
+    </block>
+    <block wx:if="{{isShowInput}}">
+      <input type="text" placeholder="加点啥？" focus="true" bindfocus = "replace" bindconfirm="inputConfirm"/>
+    </block>
+    
+  </view>
+  <view class = "rand">
+    <view style="height: 80rpx;"></view>
+    <text>不想做决定？</text>
+    <Button type = "primary" bindtap="random">我帮你选择！</Button>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+/* pages/chose/chose.wxss */
+.chosebutton{
+  margin: 5%;
+}
